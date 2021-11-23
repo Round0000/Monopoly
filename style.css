@@ -66,6 +66,11 @@ button {
     margin: 1em;
 }
 
+
+.case img {
+    max-width: 32px;
+}
+
 .player {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
