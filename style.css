@@ -6,6 +6,11 @@
   margin: 0;
 }
 
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Atkinson Hyperlegible", Tahoma, sans-serif;
 }
@@ -15,37 +20,82 @@ button {
   font-family: inherit;
 }
 
+/* Variables */
+
+:root {
+    --clrZone1: rgb(151, 123, 99);
+    --clrZone2: rgb(147, 207, 235);
+    --clrZone3: rgb(223, 137, 245);
+    --clrZone4: rgb(247, 150, 40);
+    --clrZone5: rgb(240, 58, 51);
+    --clrZone6: rgb(241, 239, 90);
+    --clrZone7: rgb(121, 172, 80);
+    --clrZone8: rgb(30, 90, 202);
+}
+
+
 /*****************/
 
 #plateau {
-  /* border: 1px dashed #222; */
+  padding: 10vmin;
   display: grid;
-  width: 90vw;
-  height: 90vh;
-  margin: 4vh auto 0;
-  grid-template-columns: repeat(11, calc(100% / 11));
-  grid-template-rows: repeat(11, calc(100% / 11));
+  /* margin: 4vh auto 0; */
+  grid-template-columns: repeat(11, 200px);
+  grid-template-rows: repeat(11, 200px);
+  background-color: rgb(211, 203, 184);
 }
 
 .case {
-  background-color: #eff5;
+  background-color:snow;
   border: 1px solid #000d;
   display: grid;
-  place-items: center;
   text-align: center;
-  font-size: 0.8rem;
+}
+
+.case p {
+    line-height: 1.2;
+}
+
+.case > * {
+  padding: 0.5em;
+}
+
+.case-container {
+    display: grid;
+    place-items: center;
+    margin: 1em;
 }
 
 .player {
-    border: 3px dashed rgba(255, 68, 0, 0.7);
-    display: grid;
-    place-items: center;
-    background-color: #dffc;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    place-self: center;
-    z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 100%;
+  align-self: end;
+  z-index: 10;
+  padding: 4px;
+}
+
+.player span {
+  margin: 4px;
+  display: grid;
+  place-items: center;
+  border: 3px solid orange;
+  background-color: #222;
+  color: white;
+  padding: 0.25em;
+}
+
+#player1 span {
+  grid-column-start: 1;
+}
+#player2 span {
+  grid-column-start: 2;
+}
+#player3 span {
+  grid-column-start: 3;
+}
+#player4 span {
+  grid-column-start: 4;
 }
 
 /* Cases */
@@ -211,20 +261,95 @@ button {
   grid-row-start: 2;
 }
 
+/* Contenu des cases */
+.case .zone {
+  grid-row-start: 1;
+  height: 30px;
+}
+.case .caseName {
+  line-height: 1;
+  grid-row-start: 2;
+  font-size: 1.1rem;
+  height: 4em;
+  position: relative;
+}
+.case .caseName::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 48%;
+  right: 48%;
+  height: 4px;
+  background-color: #2225;
+}
+.case .prix {
+  grid-row-start: 3;
+  height: 3em;
+  align-self: start;
+}
+.case .playersArea {
+  grid-row-start: 4;
+  background-color: #fff;
+  background-image: radial-gradient(#0005 15%, transparent 16%),
+    radial-gradient(#0005 15%, transparent 16%);
+  background-size: 12px 12px;
+  background-position: 0 0, 30px 30px;
+  height: 30px;
+  align-self: end;
+}
+
+.case[data-zone="1"] .zone {
+    background-color: var(--clrZone1);
+}
+.case[data-zone="2"] .zone {
+    background-color: var(--clrZone2);
+}
+.case[data-zone="3"] .zone {
+    background-color: var(--clrZone3);
+}
+.case[data-zone="4"] .zone {
+    background-color: var(--clrZone4);
+}
+.case[data-zone="5"] .zone {
+    background-color: var(--clrZone5);
+}
+.case[data-zone="6"] .zone {
+    background-color: var(--clrZone6);
+}
+.case[data-zone="7"] .zone {
+    background-color: var(--clrZone7);
+}
+.case[data-zone="8"] .zone {
+    background-color: var(--clrZone8);
+}
+
 /* Actions */
+#actionButtons {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  display: flex;
+  gap: 1em;
+  background-color: #fffd;
+  padding: 1em;
+}
+.actionBtn {
+  padding: 1em 1.5em;
+}
+
 #movePlayer1 {
-    grid-column-start: 3;
-    grid-row-start: 3;
+  grid-column-start: 3;
+  grid-row-start: 3;
 }
 #movePlayer2 {
-    grid-column-start: 5;
-    grid-row-start: 3;
+  grid-column-start: 5;
+  grid-row-start: 3;
 }
 #movePlayer3 {
-    grid-column-start: 7;
-    grid-row-start: 3;
+  grid-column-start: 7;
+  grid-row-start: 3;
 }
 #movePlayer4 {
-    grid-column-start: 9;
-    grid-row-start: 3;
+  grid-column-start: 9;
+  grid-row-start: 3;
 }

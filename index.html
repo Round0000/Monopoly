@@ -9,56 +9,269 @@
   </head>
   <body>
     <div id="plateau">
-      <div class="case" id="case1">Départ</div>
-      <div class="case" id="case2">Boulevard de Belleville</div>
-      <div class="case" id="case3">Caisse de communauté</div>
-      <div class="case" id="case4">Rue Lecourbe</div>
-      <div class="case" id="case5">Impôts sur le revenu</div>
-      <div class="case" id="case6">Gare Montparnasse</div>
-      <div class="case" id="case7">Rue de Vaugirard</div>
-      <div class="case" id="case8">? Chance ?</div>
-      <div class="case" id="case9">Rue de Courcelles</div>
-      <div class="case" id="case10">Avenue de la République</div>
-      <div class="case" id="case11">En prison</div>
-      <div class="case" id="case12">12</div>
-      <div class="case" id="case13">13</div>
-      <div class="case" id="case14">14</div>
-      <div class="case" id="case15">15</div>
-      <div class="case" id="case16">16</div>
-      <div class="case" id="case17">17</div>
-      <div class="case" id="case18">18</div>
-      <div class="case" id="case19">19</div>
-      <div class="case" id="case20">20</div>
-      <div class="case" id="case21">21</div>
-      <div class="case" id="case22">22</div>
-      <div class="case" id="case23">23</div>
-      <div class="case" id="case24">24</div>
-      <div class="case" id="case25">25</div>
-      <div class="case" id="case26">26</div>
-      <div class="case" id="case27">27</div>
-      <div class="case" id="case28">28</div>
-      <div class="case" id="case29">29</div>
-      <div class="case" id="case30">30</div>
-      <div class="case" id="case31">31</div>
-      <div class="case" id="case32">32</div>
-      <div class="case" id="case33">33</div>
-      <div class="case" id="case34">34</div>
-      <div class="case" id="case35">35</div>
-      <div class="case" id="case36">36</div>
-      <div class="case" id="case37">37</div>
-      <div class="case" id="case38">38</div>
-      <div class="case" id="case39">39</div>
-      <div class="case" id="case40">40</div>
+      <div class="case" id="case1">
+        <div class="case-container">
+          <h3>Départ</h3>
+          <p>Recevez 2k € chaque fois que vous passez ici.</p>
+        </div>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="1" id="case2">
+        <div class="zone"></div>
+        <h3 class="caseName">Boulevard de Belleville</h3>
+        <p class="prix">10k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case3">
+        <div class="case-container">
+          <h3 class="caseName">Caisse de communauté</h3>
+          <img src="/img/caissecommu.svg" alt="" />
+          <div class="playersArea"></div>
+        </div>
+      </div>
+
+      <div class="case" data-zone="1" id="case4">
+        <div class="zone"></div>
+        <h3 class="caseName">Rue Lecourbe</h3>
+        <p class="prix">10k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case5">
+        <div class="case-container">
+          <h3 class="caseName">Impôts sur le revenu</h3>
+        </div>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case6">
+        Gare Montparnasse
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="2" id="case7">
+        <div class="zone"></div>
+        <h3 class="caseName">Rue de Vaugirard</h3>
+        <p class="prix">15k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case8">
+        ? Chance ?
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="2" id="case9">
+        <div class="zone"></div>
+        <h3 class="caseName">Rue de Courcelles</h3>
+        <p class="prix">15k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="2" id="case10">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue de la République</h3>
+        <p class="prix">17k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case11">
+        En prison
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="3" id="case12">
+        <div class="zone"></div>
+        <h3 class="caseName">Boulevard de la Villette</h3>
+        <p class="prix">21k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case13">
+        13
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="3" id="case14">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue de Neuilly</h3>
+        <p class="prix">21k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="3" id="case15">
+        <div class="zone"></div>
+        <h3 class="caseName">Rue de Paradis</h3>
+        <p class="prix">24k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case16">
+        16
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="4" id="case17">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue Mozart</h3>
+        <p class="prix">28k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case18">
+        18
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="4" id="case19">
+        <div class="zone"></div>
+        <h3 class="caseName">Boulevard Saint-Michel</h3>
+        <p class="prix">28k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="4" id="case20">
+        <div class="zone"></div>
+        <h3 class="caseName">Place Pigalle</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case21">
+        21
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="5" id="case22">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue Matignon</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case23">
+        23
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="5" id="case24">
+        <div class="zone"></div>
+        <h3 class="caseName">Boulevard Malesherbes</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="5" id="case25">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue Henri-Martin</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case26">
+        26
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="6" id="case27">
+        <div class="zone"></div>
+        <h3 class="caseName">Faubourg Saint-Honoré</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="6" id="case28">
+        <div class="zone"></div>
+        <h3 class="caseName">Place de la Bourse</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case29">
+        29
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="6" id="case30">
+        <div class="zone"></div>
+        <h3 class="caseName">Rue La Fayette</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case31">
+        31
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="7" id="case32">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue de Breteuil</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="7" id="case33">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue Foch</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case34">
+        34
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="7" id="case35">
+        <div class="zone"></div>
+        <h3 class="caseName">Boulevard des Capucines</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case36">
+        36
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case37">
+        37
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="8" id="case38">
+        <div class="zone"></div>
+        <h3 class="caseName">Avenue des Champs-Elysées</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" id="case39">
+        39
+        <div class="playersArea"></div>
+      </div>
+
+      <div class="case" data-zone="8" id="case40">
+        <div class="zone"></div>
+        <h3 class="caseName">Rue de la Paix</h3>
+        <p class="prix">30k €</p>
+        <div class="playersArea"></div>
+      </div>
       <!-- Players -->
-      <div class="player" id="player1">P1</div>
-      <div class="player" id="player2">P2</div>
-      <div class="player" id="player3">P3</div>
-      <div class="player" id="player4">P4</div>
+      <div class="player" id="player1"><span>1</span></div>
+      <div class="player" id="player2"><span>2</span></div>
+      <div class="player" id="player3"><span>3</span></div>
+      <div class="player" id="player4"><span>4</span></div>
       <!-- Actions -->
-      <button id="movePlayer1">Move P1</button>
-      <button id="movePlayer2">Move P2</button>
-      <button id="movePlayer3">Move P3</button>
-      <button id="movePlayer4">Move P4</button>
+      <div id="actionButtons">
+        <button class="actionBtn" id="movePlayer1">Move P1</button>
+        <button class="actionBtn" id="movePlayer2">Move P2</button>
+        <button class="actionBtn" id="movePlayer3">Move P3</button>
+        <button class="actionBtn" id="movePlayer4">Move P4</button>
+      </div>
     </div>
 
     <script src="app.js"></script>
